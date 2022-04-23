@@ -29,7 +29,7 @@ def CriarVariavel():
     matriz = []
     matrizaux = []
     aux = ""
-    print("A linha é:",linha)
+    print("A linha é:",linha,end="")
     for i in range(0,len(linha)):
 
         if isdigit(linha[i]):
@@ -52,9 +52,8 @@ def CriarVariavel():
             # print("Matriz aux é:",matrizaux)
             matriz.append(matrizaux.copy())
             matrizaux.clear()
-
-    print("a matriz é: ",matriz)
-inicio = time.time()
+    print("a matriz é: ",matriz,"\n")
+    return matriz
 
 for l in arquivo:
     CriarVariavel()
