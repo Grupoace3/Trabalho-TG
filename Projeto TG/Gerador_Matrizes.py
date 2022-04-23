@@ -1,5 +1,6 @@
 from curses.ascii import isdigit
 import random
+
 # Gerar matrizes com linhas e colunas de tamanho distintos usando a lib random
 def gerarMatriz():
     rows = random.randrange(1,5)
@@ -9,7 +10,7 @@ def gerarMatriz():
     for r in range(0,rows):
         matrizAux = []
         for c in range(0,columns):
-            matrizAux.append(random.randrange(1,10))
+            matrizAux.append(random.randrange(1,100))
         matriz.append(matrizAux)
     return matriz
 
@@ -29,7 +30,6 @@ def EscreverLinha():
     arquivo.write('\n')
 
 #Escolhe a quantidade de matrizes a serem escritas.
-
 i = 0
 while i < 100000:
     teste = str(gerarMatriz())
